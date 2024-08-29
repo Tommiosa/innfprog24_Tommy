@@ -8,11 +8,11 @@
 <body>
     <p><span id="melding"></span></p>
 <script>
-    let user_name = "Tommy"
-    let user_birthyear = 2005
-    let age = 2024 - user_birthyear
-    let utskrift = "hei" + user_name + "(" + age+ "år)"
-    document.getElementById("melding").innerHTML
+    const user_name = "Tommy "
+    const user_birthyear = 2005
+    const age = 2024 - user_birthyear
+    const utskrift = "hei " + user_name + age + " år"
+    document.getElementById("melding").innerHTML = utskrift
 </script>
 </body>
 </html>
