@@ -7,6 +7,7 @@
 </head>
 <body>
     <p id="nameprint"></p>
+    <p id="nameprint_temlit"></p>
     <p id="calculation">0</p>
 
     <script>
@@ -15,10 +16,12 @@
         //skriver ut first name til konsollen
         console.log(firstname)
         //skriver ut firstname til HTML
-        document.getElementById("nameprint").innerHTML = "Hei" + firstname
+        document.getElementById("nameprint").innerHTML = "hei " + firstname
+        //skriver ut firstname til HTML med template literal
+        document.getElementById("nameprint_temlit").innnerHTML = `Hei ${firstname}.vær så snill å ikke leve lenger`
 
         //skrive ut et enkelt matte stykke
-        document. getElementById("calculation").innerHTML = 
+        document. getElementById("calculation").innerHTML = "kill it " + 80085
     </script>
 </body>
 </html>
