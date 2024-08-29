@@ -6,13 +6,15 @@
     <title>Variables Cheat Sheet</title>
 </head>
 <body>
-    
+    <p id="nameprint"></p>
 
     <script>
         //Vår første javascript-kommentar. og under, vår aller første variabel:
         const firstname = "Tommy"
         //skriver ut first name til konsollen
         console.log(firstname)
+        //skriver ut firstname til HTML
+        document.getElementById("nameprint").innerHTML = firstname
     </script>
 </body>
 </html>
