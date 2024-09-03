@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional logic - betinget logikk</title>
+</head>
+<body>
+    <h2>er du gammel nok til å kjøre bil?</h2>
+    <p id="carmessage"></p>
+    <h2>kan spilleren åpne kista</h2>
+    <p id="Chestmessage">Velg kiste for å sjekke</p>
+
+    <script>
+        const age = 18
+        const passed = true
+        //if test for å sjekke om vi er gamle nok:
+        if(age >= 18 && passed === true) {
+            document.getElementById("carmessage").innerHTML = "Ja"
+        } else {
+            document.getElementById("carmessage").innerHTML = "Nei"
+        }
+
+        //Vi skal sjekke om kistene er låst, og om spilleren eventuelt har en nøkkel for å låse den opp
+        const door1_locked = true
+        const door2_locked = false
+        const inventory = "key"
+        const doormsg = document.getElementById("doormessage").innerHTML
+        console.log(doormsg)
+
+        if(door2_locked === false) {
+            doormsg = "ja"
+        }
+    </script>
+</body>
+</html>
