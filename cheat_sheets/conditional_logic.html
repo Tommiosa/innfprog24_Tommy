@@ -9,10 +9,12 @@
     <h2>er du gammel nok til å kjøre bil?</h2>
     <p id="carmessage"></p>
     <h2>kan spilleren åpne kista</h2>
-    <p id="Chestmessage">Velg kiste for å sjekke</p>
+    <p id="doormessage">Velg kiste for å sjekke</p>
+    <h2>Kan jeg pensjonere meg</h2>
+    <p id="retire">Når kan jeg pensjonere meg</p>
 
     <script>
-        const age = 18
+        const age = 19
         const passed = true
         //if test for å sjekke om vi er gamle nok:
         if(age >= 18 && passed === true) {
@@ -21,7 +23,7 @@
             document.getElementById("carmessage").innerHTML = "Nei"
         }
 
-        //Vi skal sjekke om kistene er låst, og om spilleren eventuelt har en nøkkel for å låse den opp
+        //Vi skal sjekke om kistene er låst, og om spilleren eventuelt har en nøkkel for å låse den opp:
         const door1_locked = true
         const door2_locked = false
         const backpack = ""
@@ -36,6 +38,15 @@
             } else {
                 doormsg.innerHTML = "Nei"
             }
+        }
+
+        //Sjekk av mulig pensjonsalder:
+        if(age >= 62 && age < 67) {
+            document.getElementById("retire").innerHTML = "Du kan gå av med AFP"
+        } else if(age >=67) {
+            document.getElementById("retire").innerHTML = "Du kan gå av med full pensjon"
+        } else {
+            document.getElementById("retire").innerHTML = `Du kan gå av med AFP om ${62 - age} pr, og full pensjon om ${67 - age} år.`
         }
     </script>
 </body>
