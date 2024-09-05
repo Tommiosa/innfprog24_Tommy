@@ -6,14 +6,16 @@
     <title>Oppgave if1</title>
 </head>
 <body>
+    <p id="utskrift"></p>
     <script>
-        let navn = "Tommy"
+        const navn = "Tommy"
         let utskrift;
         if(navn === "Tommy") {
-            document.getElementById("Tommy").innerHTML = "Mitt navn er "
+            utskrift = "Mitt navn er " + navn + " Pedersen"
         } else {
-            document.getElementById("Tommy").innerHTML = "Mitt navn er ikke"
+            utskrift = "Mitt navn er ikke " + navn + " Pedersen"
         }
+        document.getElementById("utskrift").innerHTML = utskrift
     </script>
 </body>
 </html>
