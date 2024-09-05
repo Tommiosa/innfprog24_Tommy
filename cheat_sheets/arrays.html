@@ -14,16 +14,25 @@
     <script>
         //Oprette en array med filmtitler
         const moviearray = ["Interstellar", "Top Gun", "Titanic", "Zoolander", "Minecraft", "Pokemon", "Golden eye"]
-        //Skriv ut film med index 3:
-        const index = 3
-        document.getElementById("movietitle").innerHTML = moviearray[index]
+        
         //Å legge til et element på slutten av en array
         moviearray.push("The Excorcist")
         //Å slette en film (med en bestemt index)
         moviearray.splice(3, 1)
+        //Sjekke etter et bestemt element i arrayen
+        const movieexists = moviearray.includes("Zoolander")
+        console.log("Finnes Zoolander? " + movieexists)
+        //Sortere en array fra A-Å
+        moviearray.sort()
+        //Sortere fra Å-A
+        moviearray.reverse
 
-        //skriv ut antall filmer:
+
+        //Skriv ut antall filmer:
         document.getElementById("moviecount").innerHTML = moviearray.length
+        //Skriv ut film med index 3:
+        const index = 3
+        document.getElementById("movietitle").innerHTML = moviearray[index]
         //Vis moviearray i konsoll
         console.log(moviearray)
     </script>
