@@ -6,9 +6,32 @@
     <title>Oppgave if3</title>
 </head>
 <body>
-    
+    <p id="utskrift"></p>
     <script>
+        const barn1 = "jente"
+        const barn2 = "gutt"
+        const barn3 = "jente"
+        let utskrift;
 
+        const antall_jenter = 0
+        const antall_gutter = 0
+        if(barn1 === "jente") {
+            antall_jenter = +1
+        } else {
+            antall_gutter = +1
+        }
+        if(barn1 === "gutt") {
+            antall_gutter = +1
+        } else {
+            antall_jenter = +1
+        }
+        if(barn1 === "jente") {
+            antall_jenter = +1
+        } else {
+            antall_gutter = +1
+        }
+        utskrift = "jenter: " + antall_jenter + "gutter: " + antall_gutter
+        document.getElementById("utskrift").innerHTML = utskrift
     </script>
 </body>
 </html>
