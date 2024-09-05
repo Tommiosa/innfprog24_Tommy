@@ -12,13 +12,15 @@
     <p>Film på index 3: <span id="movietitle">?</span></p>
 
     <script>
-        //oprette en array med filmtitler
+        //Oprette en array med filmtitler
         const moviearray = ["Interstellar", "Top Gun", "Titanic", "Zoolander", "Minecraft", "Pokemon", "Golden eye"]
         //Skriv ut film med index 3:
         const index = 3
         document.getElementById("movietitle").innerHTML = moviearray[index]
-        //å legge til et element på slutten av en array
+        //Å legge til et element på slutten av en array
         moviearray.push("The Excorcist")
+        //Å slette en film (med en bestemt index)
+        moviearray.splice(3, 1)
 
         //skriv ut antall filmer:
         document.getElementById("moviecount").innerHTML = moviearray.length
