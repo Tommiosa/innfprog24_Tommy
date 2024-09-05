@@ -17,9 +17,11 @@
         //Skriv ut film med index 3:
         const index = 3
         document.getElementById("movietitle").innerHTML = moviearray[index]
+        //å legge til et element på slutten av en array
+        moviearray.push("The Excorcist")
+
         //skriv ut antall filmer:
         document.getElementById("moviecount").innerHTML = moviearray.length
-
         //Vis moviearray i konsoll
         console.log(moviearray)
     </script>
