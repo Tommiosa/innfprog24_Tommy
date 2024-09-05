@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave if2</title>
+</head>
+<body>
+    <p id="utskrift"></p>
+    <script>
+        const age = 19
+        let utskrift;
+        if(age < 18 ) {
+            document.getElementById("utskrift").innerHTML = "Du er ikke myndig " + "(" + age + " år)"
+        } else if(age >= 18 && age <= 62) {
+            document.getElementById("utskrift").innerHTML = "Du er myndig og er klar for studier eller arbeidlivet " + "(" + age + " år)"
+        } else {
+            document.getElementById("utskrift").innerHTML = "Du er pensjonsklar! " + "(" + age + " år)"
+        }
+
+    </script>
+</body>
+</html>
