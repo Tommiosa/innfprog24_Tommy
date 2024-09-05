@@ -8,11 +8,11 @@
 <body>
     <p id="utskrift"></p>
     <script>
-        const ITF19019_grade = "A"
-        const ITF10511_grade = "F"
+        const ITF19019_grade = "C"
+        const ITF10511_grade = "C"
 
-        const ITF19019_passed = ITF19019_grade ? true : false
-        const ITF10511_passed = ITF10511_grade ? true : false
+        const ITF19019_passed = ITF19019_grade === "C" ? true : false
+        const ITF10511_passed = ITF10511_grade === "C" ? true : false
 
         let countpassed = 0
         if(ITF19019_passed === true) {
