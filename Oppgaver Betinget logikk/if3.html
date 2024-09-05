@@ -11,27 +11,28 @@
         const barn1 = "jente"
         const barn2 = "gutt"
         const barn3 = "jente"
-        let utskrift;
+        
+        let utskrift=""
 
-        const antall_jenter = 0
-        const antall_gutter = 0
+        let antall_jenter = 0
+        let antall_gutter = 0
         if(barn1 === "jente") {
-            antall_jenter = +1
+            antall_jenter += 1
         } else {
-            antall_gutter = +1
+            antall_gutter += 1
         }
-        if(barn1 === "gutt") {
-            antall_gutter = +1
+        if(barn2 === "gutt") {
+            antall_gutter += 1
         } else {
-            antall_jenter = +1
+            antall_jenter += 1
         }
-        if(barn1 === "jente") {
-            antall_jenter = +1
+        if(barn3 === "jente") {
+            antall_jenter += 1
         } else {
-            antall_gutter = +1
+            antall_gutter += 1
         }
-        utskrift = "jenter: " + antall_jenter + "gutter: " + antall_gutter
-        document.getElementById("utskrift").innerHTML = utskrift
+        utskrift = "jenter: " + antall_jenter + " gutter: " + antall_gutter;
+        document.getElementById("utskrift").innerHTML = utskrift;
     </script>
 </body>
 </html>
