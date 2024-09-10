@@ -6,21 +6,45 @@
     <title>Object cheat sheet</title>
 </head>
 <body>
-    <p id="contactinfo"></p>
+    <ul id="profiles"></ul>
 
     <script>
-        const lecturer = [
+        const lecturers = [
             {
                 personname: "Marius Akerbæk",
                 office: "D1-016",
                 email: "toremake@hiof.no",
                 birthyear: 1983,
                 courses: ["Innføring i programmering", "Kommunikasjonsdesign", "UI designprosjekt", "Utvikling av interaktive nettsider"]
+            },
+            {
+                personname: "Ann-Charlott Karlsen",
+                office: "D1-062",
+                email: "ackarlse@hiof.no",
+                Birthyear: 1992,
+                courses: ["Webutvikling", "Utvikling av interaktive nettsider"]
+            },
+            {
+                personname: "Ole Edvard Ørebæk",
+                office: "D1-061A",
+                email: "oledvo@hiof.no",
+                birthyear: 1993,
+                courses: ["Designmetoder", "UI Designprosjekter"]
+            }
+            {
+                personname: "Daniela Blauhut",
+                office: "D1-015"
+                email: "danielb@hiof.no"
+                birthyear: 1977
+                courses: ["innføring i datasikkerhet"]
             }
         ]
-        document.getElementById("contactinfo").innerHTML = `${lecturer.personname} sitter på kontor ${lecturer.office}. Epost: ${lecturer.email}. Favorittkurset hans er ${lecturer.courses[0]}.`
 
-        console.log(lecturer)
+
+
+        //document.getElementById("profiles").innerHTML = `${lecturer.personname} sitter på kontor ${lecturer.office}. Epost: ${lecturer.email}. Favorittkurset hans er ${lecturer.courses[0]}.`
+
+        console.log(lecturers)
     </script>
 </body>
 </html>
