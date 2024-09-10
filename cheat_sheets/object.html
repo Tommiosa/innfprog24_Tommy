@@ -17,7 +17,7 @@
             courses: ["Innføring i programmering", "Kommunikasjonsdesign", "UI designprosjekt", "Utvikling av interaktive nettsider"]
         }
 
-        document.getElementById("contactinfo").innerHTML = lecturer.personname
+        document.getElementById("contactinfo").innerHTML = `${lecturer.personname} sitter på kontor ${lecturer.office}. Epost: ${lecturer.email}`
 
         console.log(lecturer)
     </script>
