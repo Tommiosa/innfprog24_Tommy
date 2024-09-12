@@ -21,7 +21,7 @@
                 personname: "Ann-Charlott Karlsen",
                 office: "D1-062",
                 email: "ackarlse@hiof.no",
-                Birthyear: 1992,
+                birthyear: 1992,
                 courses: ["Webutvikling", "Utvikling av interaktive nettsider"]
             },
             {
@@ -52,6 +52,10 @@
                 ${lecturer.courses.map(course => `<li>${course}</li>`).join("")}
             </ul>
         </li>`)
+        /* 
+            Derseom vi bruker .map på en array med tekststrenger,
+            må vi bruke metoden .join("") etter ci har kjørt .map for å fjerne . map komma-generering
+        */
 
 
         //document.getElementById("profiles").innerHTML = `${lecturer.personname} sitter på kontor ${lecturer.office}. Epost: ${lecturer.email}. Favorittkurset hans er ${lecturer.courses[0]}.`
