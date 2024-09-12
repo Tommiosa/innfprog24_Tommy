@@ -49,7 +49,7 @@
        lecturers.map(lecturer => document.getElementById("profiles").innerHTML += 
         `<li>${lecturer.personname}
             <ul>
-                ${lecturer.courses.map(courses => `<li>X</li>`)}
+                ${lecturer.courses.map(course => `<li>${course}</li>`)}
             </ul>
         </li>`)
 
