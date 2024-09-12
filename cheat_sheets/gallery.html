@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery example</title>
+    <style>
+        section {display: flex; gap: 1rem; }
+        article {max-width: 400p; border: 1px solid #333; padding: .5rem;}
+        article img {max-width: 100%;}
+    </style>
 </head>
 <body>
     <section id="gallery">
@@ -47,6 +52,8 @@
         images.map(image => document.getElementById("gallery").innerHTML += 
         `<article>
             <img src="${image.imageURL}">
+            <p><strong>${image.title}</strong></p>
+            <p>Photographer: ${image.Photographer}<p>
         </article>`)
     </script>
 </body>
