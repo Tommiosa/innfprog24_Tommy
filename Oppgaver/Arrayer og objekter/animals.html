@@ -7,10 +7,14 @@
 </head>
 <body>
     <p id="utskrift"></p>
+    <p id="setning"></p>
     <script>
-        const animalarray = ["Siamese", "British Shorthair", "Maine Coon", "Ragdoll", "Skogkatt", "Savannah", "Tuxedo", "Calico", "Persian", "Khao Manee"]
-        const katter = `her er to katter, ${animalarray[0]} og ${animalarray[5]}`
-        document.getElementById("utskrift").innerHTML = katter
+        const dyrearray = ["sjiraff", "ulv", "løve", "geopard", "kråke", "ørn", "slange", "flaggermus", "hest", "rev"]
+        const animalarray = ["giraffe", "wolf", "lion", "cheetah", "crow", "eagle", "snake", "bat", "horse", "fox"]
+        const instinct = `her er to dyr, ${dyrearray[0]} og ${dyrearray[5]}`
+        const translate = `${dyrearray[3]} er et dyr. Det heter ${animalarray[3]} på engelsk. ${dyrearray[7]} er også et dyr, som heter ${animalarray[7]} på engelsk.`
+        document.getElementById("utskrift").innerHTML = instinct
+        document.getElementById("setning").innerHTML = translate
     </script>
 </body>
 </html>
