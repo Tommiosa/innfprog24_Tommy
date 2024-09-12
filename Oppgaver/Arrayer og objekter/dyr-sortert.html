@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oversikt over dyr</title>
+    <title>Legg til og tell opp dyr</title>
 </head>
 <body>
     <p id="utskrift"></p>
@@ -12,7 +12,9 @@
         const animalarray = ["Siamese", "British Shorthair", "Maine Coon", "Ragdoll", "Skogkatt", "Savannah", "Tuxedo", "Calico", "Persian", "Khao Manee"]
         const katter = `her er to katter, ${animalarray[0]} og ${animalarray[5]}`
         document.getElementById("utskrift").innerHTML = katter
-        animalarray.push("Elefant", "Hai")
+        animalarray.push("Scottish fold", "Japanese bobtail")
+        animalarray.sort()
+        console.log(animalarray)
     </script>
 </body>
 </html>
