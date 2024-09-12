@@ -10,10 +10,10 @@
     <p>Antall katter: <span id="antall"></span></p>
     <script>
         const animalarray = ["Siamese", "British Shorthair", "Maine Coon", "Ragdoll", "Skogkatt", "Savannah", "Tuxedo", "Calico", "Persian", "Khao Manee"]
-        const katter = `her er alle kattene, ${animalarray[0-11]}`
+        const katter = `her er 2 katter, ${animalarray[0]} og ${animalarray[5]}`
         animalarray.push("Scottish fold", "Japanese bobtail")
         animalarray.sort()
-        document.getElementById("utskrift").innerHTML = katter
+        document.getElementById("utskrift").innerHTML += katter
         document.getElementById("antall").innerHTML = animalarray.length
         
         console.log(animalarray)
