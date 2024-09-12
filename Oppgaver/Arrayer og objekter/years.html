@@ -10,8 +10,10 @@
     <script>
         const years = [1066, 1564, 1455, 1346, 1215]
         years.sort(function(a, b) {return b-a})
-        const eventHTML = ""
-        console.log(years)
+        let eventHTML = ""
+        years.map(year => eventHTML += `<li>${year}</li>`)
+        document.getElementById("event").innerHTML = "årstall i rekkefølge" + eventHTML
+        console.log
     </script>
 </body>
 </html>
