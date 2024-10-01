@@ -277,13 +277,15 @@
             if(rundenVunnet === true) {
                 //Skriv ut hvilken spiller som har vunnet
                 document.getElementById("playerturn").innerHTML = "Spiller " + player + " har vunnet!";
-                //Når en spiller har vunnet så endres bakgrunnsfargen til "gull"
+                //Når en spiller har vunnet så endres bakgrunnsfargen i toppteksten til "gull"
                 document.getElementById("playerturn").style.backgroundColor = "#FFD700";
                 //Gjør restart spill-knappen synlig
                 document.getElementById("newgame").style.display = "block";
+
+                document.getElementById("winningCombos").style.color = "#FFD700";
+
                 //Sett spillstatus til false, slik at ingen spillere får plassere
                 //flere brikker på brettet - dette løses med sjekken i funksjonen spill()
-                document.getElementById("playermark").style.color = "#FFD700";
                 spillStatus = false;
             }
         }
