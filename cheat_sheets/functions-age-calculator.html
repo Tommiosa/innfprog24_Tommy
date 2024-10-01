@@ -13,7 +13,14 @@
         function ageCalculator(birthyear = "2005", year = "2024") {
             //regn ut alder
             const age = year - birthyear
+            console.log(age)
+            let text = ""
+            if(year > 2024) {
+                text = `i ${year} vil du være ${age} år gammel`
+            }
         }
+
+        ageCalculator(2005, 4098)
     </script>
 </body>
 </html>
