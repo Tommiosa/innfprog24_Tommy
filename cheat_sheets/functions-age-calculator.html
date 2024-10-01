@@ -18,14 +18,18 @@
             if(year > 2024) {
                 text = `I ${year} vil du være ${age} år gammel`
             } else if(year < 2024) {
+                if(age < 0) {
+                    text = `Der er ${Math.abs(age)} år til du blir født i ${birthyear}`
+                } else {
                 text = `I ${year} var du ${age} år gammel`
+                } 
             } else {
                 text = `I år er du ${age} år gammel`
             }
             document.getElementById("agesentence").innerHTML = text
         }
 
-        ageCalculator(2005, 2024)
+        ageCalculator(2005, 1945)
     </script>
 </body>
 </html>
