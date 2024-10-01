@@ -270,16 +270,20 @@
                     rundenVunnet = true;
                     break;
                 }
+
             }
 
             //Hvis runden er vunnet, skal vi gjøre noen handlinger:
             if(rundenVunnet === true) {
                 //Skriv ut hvilken spiller som har vunnet
                 document.getElementById("playerturn").innerHTML = "Spiller " + player + " har vunnet!";
+                //Når en spiller har vunnet så endres bakgrunnsfargen til "gull"
+                document.getElementById("playerturn").style.backgroundColor = "#FFD700";
                 //Gjør restart spill-knappen synlig
                 document.getElementById("newgame").style.display = "block";
                 //Sett spillstatus til false, slik at ingen spillere får plassere
                 //flere brikker på brettet - dette løses med sjekken i funksjonen spill()
+                document.getElementById("playermark").style.color = "#FFD700";
                 spillStatus = false;
             }
         }
@@ -305,6 +309,8 @@
             playermark = "X";
             // 4)
             document.getElementById("playerturn").innerHTML = 'Spiller <span id="player">1</span> (<span id="playermark">X</span>) sin tur:';
+            //Når spillet begynner på nytt så endres bakgrunnen tilbake igjen fra "gull"
+            document.getElementById("playerturn").style.backgroundColor = "";
         }
     </script>
 </body>
