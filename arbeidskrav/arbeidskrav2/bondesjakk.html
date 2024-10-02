@@ -67,6 +67,22 @@
             color: white;
             cursor: pointer;
         }
+
+        @keyframes hoverAndRotate {
+        0% {
+            transform: translateY(0) rotate(0deg);
+        }
+        50% {
+            transform: translateY(-20px) rotate(180deg);
+        }
+        100% {
+            transform: translateY(0) rotate(360deg);
+        }
+        }
+
+        .sickAnimation{
+            animation: hoverAndRotate 3s infinite ease-in-out;
+        }
     </style>
 
 </head>
@@ -283,6 +299,20 @@
                 document.getElementById("newgame").style.display = "block";
                 //Sett spillstatus til false, slik at ingen spillere får plassere
                 //flere brikker på brettet - dette løses med sjekken i funksjonen spill()
+
+
+                document.getElementById("celle"+vinnerKomboPlass1).innerHTML = "L";
+                document.getElementById("celle"+vinnerKomboPlass2).innerHTML = "O";
+                document.getElementById("celle"+vinnerKomboPlass3).innerHTML = "L";
+
+                document.getElementById("celle"+vinnerKomboPlass1).style.color = "#ffd700";
+                document.getElementById("celle"+vinnerKomboPlass2).style.color = "#ffd700";
+                document.getElementById("celle"+vinnerKomboPlass3).style.color = "#ffd700";
+
+                document.getElementById("celle"+vinnerKomboPlass1).classList.add("sickAnimation");
+                document.getElementById("celle"+vinnerKomboPlass2).classList.add("sickAnimation");
+                document.getElementById("celle"+vinnerKomboPlass3).classList.add("sickAnimation");
+
                 spillStatus = false;
             }
         }
