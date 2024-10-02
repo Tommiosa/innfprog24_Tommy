@@ -230,7 +230,12 @@
                     //Når brikken er plassert på spillerbrettet, må vi sjekke om den - og brikkene rundt - 
                     //utgjør en vinnerkombinasjon. Denne funksjonaliteten ligger i funksjonen sjekkVinner(),
                     //siden dette er et litt større sett med handlinger og kan gi noen ulike utfall.
-                    sjekkVinner();
+                    //Timeout funksjon blir tatt med for å utsette kåringen av vinneren
+                    setTimeout(function() {
+                        sjekkVinner();
+                    }, 1000)
+                    
+                    
 
                 //Men, hvis cellen ikke er ledig...
                 } else {
@@ -286,7 +291,6 @@
                     rundenVunnet = true;
                     break;
                 }
-
             }
 
             //Hvis runden er vunnet, skal vi gjøre noen handlinger:
