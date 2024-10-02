@@ -300,15 +300,17 @@
                 //Sett spillstatus til false, slik at ingen spillere får plassere
                 //flere brikker på brettet - dette løses med sjekken i funksjonen spill()
 
+                //Velge ut playermark for å gjøre endringer
+                document.getElementById("celle"+vinnerKomboPlass1).innerHTML = playermark;
+                document.getElementById("celle"+vinnerKomboPlass2).innerHTML = playermark;
+                document.getElementById("celle"+vinnerKomboPlass3).innerHTML = playermark;
 
-                document.getElementById("celle"+vinnerKomboPlass1).innerHTML = "L";
-                document.getElementById("celle"+vinnerKomboPlass2).innerHTML = "O";
-                document.getElementById("celle"+vinnerKomboPlass3).innerHTML = "L";
-
+                //bytter playermark til "gull" når spilleren har vunnet
                 document.getElementById("celle"+vinnerKomboPlass1).style.color = "#ffd700";
                 document.getElementById("celle"+vinnerKomboPlass2).style.color = "#ffd700";
                 document.getElementById("celle"+vinnerKomboPlass3).style.color = "#ffd700";
 
+                //spiller av en animasjon til playermark når en spiller har vunnet
                 document.getElementById("celle"+vinnerKomboPlass1).classList.add("sickAnimation");
                 document.getElementById("celle"+vinnerKomboPlass2).classList.add("sickAnimation");
                 document.getElementById("celle"+vinnerKomboPlass3).classList.add("sickAnimation");
