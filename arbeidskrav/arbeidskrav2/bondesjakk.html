@@ -287,6 +287,20 @@
             }
         }
 
+        let spillerHarVunnet = true
+
+        setTimeout(function()) {
+            console.warn("Alle kode her inne blir kalt etter 1s (1000millisec)")
+            
+            if (spillerHarVunnet) {
+                const elements = document.getElementsByClassName(`spillerbrikker`);
+
+                for (let i = o; i < elements.length; i++) {
+                    elements.style.backgroundColor = `#FFD700`
+                }
+            }
+        } 
+
         //Når et spill er avsluttet, og et nytt skal begynne, må vi gjøre klar en del ting:
         // 1) Fjerne brikkene som er plassert på brettet - både i grensesnittet og i programmet vårt
         // 2) Sette spillstatus til true, slik at vi får lov til å trykke på rutene i spillbrettet igjen
