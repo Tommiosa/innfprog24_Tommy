@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddEventListener Cheat Sheet</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+        button {
+            font-size: 40px;
+            padding: 20px;
+            cursor: pointer;
+        }
+        .purple {
+            background-color:  rgb(119, 0, 255);
+            color: white;
+        }
+
+        .pink {
+            background-color: rgb(255, 106, 240);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <button id="knapp" class="purple">Trykk på meg</button>
+
+    <script>
+        document.addEventListener("mousemove", function(event) {
+            console.log(event)
+        })
+
+        const knapp = document.getElementById("knapp")
+        //endre tekst og farge på knapp når musepekeren er over knappen:
+        knapp.addEventListener("mouseover", function() {
+            knapp.innerHTML = "Neeeei! harassment! harassment!"
+            knapp.classList.add("pink")
+            knapp.classList.remove("purple")
+        })
+        //tilbakestill knapp når musepekeren ikke lenger er over knappen
+        knapp.addEventListener("mouseout", function(){
+            knapp.innerHTML = "Trykk på meg"
+            knapp.classList.add("purple")
+            knapp.classList.remove("pink")
+        })
+    </script>
+</body>
+</html>
