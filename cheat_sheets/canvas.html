@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas cheat sheet</title>
+    <style>
+        body {
+            background: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        canvas {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="drawingarea"></canvas>
+    
+    <script>
+        //standard config av Canvas
+        const canvas = document.getElementById("drawingarea")
+        canvas.width = 800
+        canvas.height = 600
+        const ctx = canvas.getContext("2d")
+
+        //PATH
+        ctx.beginPath()
+        ctx.moveTo(0, 0)
+        ctx.lineTo(600, 600)
+        ctx.stroke()
+        ctx.closePath()
+
+        //RECTANGLES (RECT)
+        ctx.beginPath()
+        ctx.rect(100, 100, 200, 200)
+        ctx.fillStyle = "cyan"
+        ctx.fill()
+        ctx.strokeStyle = "purple"
+        ctx.stroke()
+        ctx.closePath()
+        //
+        //ctx.clearRECT(0, 0, canvas.width, canvas.height)
+
+        //SIRKEL (ARC)
+        ctx.beginPath()
+        //arc(x, y, radius, circle start 0, 0,5 / 1,0 / 1,5 / 2,0 * MathPI)
+        ctx.arc(400, 400, 100, 0, 2 * Math.PI)
+        ctx.fillStyle = "magenta"
+        ctx.fill()
+        ctx.strokeStyle = "blue"
+        ctx.stroke()
+        ctx.closePath()
+
+        //TEXT
+        ctx.beginPath()
+        ctx.font = "80px Georgia"
+        ctx.strokeText("Fire", 390, 390)
+        ctx.font = "70px Arial"
+        ctx.fillStyle = "black"
+        ctx.fillText("Tommy", 300, 100)
+        ctx.closePath()
+
+        //
+        const pumpkin = new image()
+        let pumpkinLoaded = false
+        pumpkin.onload() = (pumpkinLoaded = true)
+        pumpkin.src = "pumpkin.webp"
+        pumpkinloaded ? ctx.drawImage(pumpkin, 600, 50)
+    </script>
+</body>
+</html>
