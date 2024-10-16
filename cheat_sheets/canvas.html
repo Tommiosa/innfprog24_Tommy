@@ -41,8 +41,8 @@
         ctx.strokeStyle = "purple"
         ctx.stroke()
         ctx.closePath()
-        //
-        //ctx.clearRECT(0, 0, canvas.width, canvas.height)
+        //.fillRect(), .strokeRect()
+        //Tømme canvaset: ctx.clearRect(0, 0, canvas.width, canvas.height)
 
         //SIRKEL (ARC)
         ctx.beginPath()
@@ -63,12 +63,13 @@
         ctx.fillText("Tommy", 300, 100)
         ctx.closePath()
 
-        //
-        const pumpkin = new image()
+        //TEGN ET EKSISTERENDE BILDE INN I CANVAS
+        const pumpkin = new Image(128, 128)
         let pumpkinLoaded = false
-        pumpkin.onload() = (pumpkinLoaded = true)
+        pumpkin.onload = () => { 
+            ctx.drawImage(pumpkin, 0, 0, 128, 128)
+        }
         pumpkin.src = "pumpkin.webp"
-        pumpkinLoaded = ctx.drawImage(pumpkin, 600, 50)
     </script>
 </body>
 </html>
