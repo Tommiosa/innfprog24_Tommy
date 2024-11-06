@@ -6,7 +6,7 @@
     <title>Arbeidskrav 3: karakterkalkulator </title>
     <style>
         body {
-            background-color: #beedff; 
+            background-color: #c4beff; 
             display: flex; 
             flex-direction: column; 
             justify-content: center; 
@@ -17,16 +17,29 @@
 
         button {
             padding: 20px;
-            background-color: white;
+            background-color: rgb(246, 176, 255);
         }
     </style>
 </head>
 <body>
-    <h1>Grade Calculator</h1>
-    <label for="scoreInput">Enter your score:</label>
-    <input type="number" id="scoreInput" placeholder="Score" min="0" max="100">
-    <button onclick="calculateGrade()">Calculate Grade</button>
-    <p id="result"></p>
+    <h1>Karakter Kalkulator</h1>
+
+    <label for="poeng1">Poeng fra oppgave 1:</label>
+    <input type="number" id="poeng1" placeholder="Poeng fra oppgave 1" min="0">
+
+    <label for="max1">Maximum poeng for oppgave 1:</label>
+    <input type="number" id="max1" placeholder="Max poeng oppgave 1" min="1">
+
+
+    <label for="poeng2">Poeng fra oppgave 2:</label>
+    <input type="number" id="poeng2" placeholder="Poeng fra oppgave 2" min="0">
+
+    <label for="max2">Maximum poeng for oppgave 2:</label>
+    <input type="number" id="max2" placeholder="Max poeng oppgave 2" min="1">
+
+
+    <button onclick="karakterknapp()">Beregn karakter</button>
+    <p id="resultat"></p>
 
     <script>
         const grades = [
@@ -36,30 +49,34 @@
             { grade: "C", threshold: 68 },
             { grade: "B", threshold: 88 },
             { grade: "A", threshold: 100 }
-        ];
+        ]
 
-        function getGrade(score) {
+        function getGrade(totalpoeng) {
             const sortedGrades = grades.sort((a, b) => b.threshold - a.threshold);
-            
             for (const grade of sortedGrades) {
-                if (score >= grade.threshold) {
-                    return grade.grade;
+                if (totalpoeng >= grade.threshold) {
+                    return grade.grade
                 }
             }
-            
-            return "F";
         }
 
-        function calculateGrade() {
-            const scoreInput = document.getElementById("scoreInput").value;
-            const score = parseInt(scoreInput);
+        function karakterknapp() {
+            const poeng1 = document.getElementById("poeng1").value
+            const poeng2 = document.getElementById("poeng2").value
+            const max1 = document.getElementById("max1").value
+            const max2 = document.getElementById("max2").value
 
-            if (isNaN(score) || score < 0 || score > 100) {
-                document.getElementById("result").innerText = "Please enter a valid score between 0 and 100.";
-            } else {
-                const grade = getGrade(score);
-                document.getElementById("result").innerText = `Your grade is: ${grade}`;
+            if (poeng1 < 0, poeng2 < 0, max1 <= 0, max2 <= 0) {
+                document.getElementById("resultat").innerText = "putt inn riktig nummer"
+                return
             }
+
+            const prosent1 = (poeng1 / max1) * 100
+            const prosent2 = (poeng2 / max2) * 100
+            const totalpoeng = (0.3 * prosent1) + (0.7 * prosent2)
+
+            const grade = getGrade(totalpoeng)
+            document.getElementById("resultat").innerText = `Din karakter er: ${grade}`
         }
     </script>
 </body>
