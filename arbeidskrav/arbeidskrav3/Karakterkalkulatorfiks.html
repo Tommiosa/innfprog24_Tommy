@@ -35,17 +35,17 @@
 
     <script>
         const grades = [
-            { grade: "F", threshold: 0 },
-            { grade: "E", threshold: 25 },
-            { grade: "D", threshold: 44 },
-            { grade: "C", threshold: 68 },
-            { grade: "B", threshold: 88 },
+            { grade: "F", threshold: 25 },
+            { grade: "E", threshold: 44 },
+            { grade: "D", threshold: 68 },
+            { grade: "C", threshold: 88 },
+            { grade: "B", threshold: 99 },
             { grade: "A", threshold: 100 }
         ]
 
         function getGrade(totalpoeng) {
             for (const grade of grades) {
-                if (totalpoeng >= grade.threshold) {
+                if (totalpoeng <= grade.threshold) {
                     return grade.grade
                 }
             }
