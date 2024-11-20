@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbeidskrav 3: karakterkalkulator </title>
+    <style>
+        body {
+            background-color: #beedff; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center;
+            text-align: center;
+            font-family: Georgia, serif;
+        }
+
+        button {
+            padding: 20px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Karakter Kalkulator</h1>
+
+    <label for="poeng1">Poeng fra oppgave 1 (Maks 10):</label>
+    <input type="number" id="poeng1" placeholder="Poeng fra oppgave 1" min="0" max="10">
+
+    <label for="poeng2">Poeng fra oppgave 2 (Maks 12):</label>
+    <input type="number" id="poeng2" placeholder="Poeng fra oppgave 2" min="0" max="12">
+
+    <button onclick="karakterknapp()">Beregn karakter</button>
+    <p id="resultat"></p>
+
+    <script>
+        const grades = [
+            { grade: "F", threshold: 0 },
+            { grade: "E", threshold: 25 },
+            { grade: "D", threshold: 44 },
+            { grade: "C", threshold: 68 },
+            { grade: "B", threshold: 88 },
+            { grade: "A", threshold: 100 }
+        ]
+
+        function getGrade(totalpoeng) {
+            for (const grade of grades) {
+                if (totalpoeng >= grade.threshold) {
+                    return grade.grade
+                }
+            }
+            return "F"
+        }
+
+        function karakterknapp() {
+            const poeng1 = document.getElementById("poeng1").value
+            const poeng2 = document.getElementById("poeng2").value
+            const max1 = 10
+            const max2 = 12
+
+            if (poeng1 < 0, poeng2 < 0, poeng1 > max1, poeng2 > max2) {
+                document.getElementById("resultat").innerText = "Putt inn riktig nummer innenfor maksgrensen."
+                return
+            }
+
+            const prosent1 = (poeng1 / max1) * 100
+            const prosent2 = (poeng2 / max2) * 100
+
+            const totalpoeng = (0.3 * prosent1) + (0.7 * prosent2)
+
+            const grade = getGrade(totalpoeng)
+            document.getElementById("resultat").innerText = `Din karakter er: ${grade}`
+        }
+    </script>
+</body>
+</html>
